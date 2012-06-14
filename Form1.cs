@@ -256,11 +256,8 @@ namespace BF3_Launcher_V2
         
 
         private void geckoWebBrowser3_ProgressChanged(object sender, GeckoProgressEventArgs e)
-        {
-            progressBar1.Maximum = e.MaximumProgress;
-            progressBar1.Value = e.CurrentProgress;
-            txt_url.Text = geckoWebBrowser3.Url.ToString();
-            
+        { 
+            txt_url.Text = geckoWebBrowser3.Url.ToString();            
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -448,6 +445,18 @@ namespace BF3_Launcher_V2
             txt_Pass.SelectionStart = 0;
             txt_Pass.SelectionLength = txt_Pass.Text.Length;
         }
+
+        private void geckoWebBrowser3_Navigating(object sender, GeckoNavigatingEventArgs e)
+        {
+            
+        }
+
+        private void geckoWebBrowser3_Navigated(object sender, GeckoNavigatedEventArgs e)
+        {
+           
+        }
+
+        
 
         
         

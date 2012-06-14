@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.check_size = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cmd_einstellsp = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,39 +51,35 @@
             this.label2 = new System.Windows.Forms.Label();
             this.check_autologin = new System.Windows.Forms.CheckBox();
             this.txt_name = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txt_url = new System.Windows.Forms.ComboBox();
             this.cmd_zurueck = new System.Windows.Forms.Button();
             this.cmd_vor = new System.Windows.Forms.Button();
             this.cmd_los = new System.Windows.Forms.Button();
             this.panel_Browser = new System.Windows.Forms.Panel();
-            this.check_size = new System.Windows.Forms.CheckBox();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.panel_Browser.SuspendLayout();
             this.SuspendLayout();
             // 
             // geckoWebBrowser3
             // 
-            this.geckoWebBrowser3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.geckoWebBrowser3.Location = new System.Drawing.Point(12, 38);
+            this.geckoWebBrowser3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.geckoWebBrowser3.Location = new System.Drawing.Point(0, 0);
             this.geckoWebBrowser3.Name = "geckoWebBrowser3";
-            this.geckoWebBrowser3.Size = new System.Drawing.Size(1129, 590);
+            this.geckoWebBrowser3.Size = new System.Drawing.Size(1153, 651);
             this.geckoWebBrowser3.TabIndex = 0;
             this.geckoWebBrowser3.StatusTextChanged += new System.EventHandler(this.geckoWebBrowser3_StatusTextChanged);
+            this.geckoWebBrowser3.Navigating += new Skybound.Gecko.GeckoNavigatingEventHandler(this.geckoWebBrowser3_Navigating);
+            this.geckoWebBrowser3.Navigated += new Skybound.Gecko.GeckoNavigatedEventHandler(this.geckoWebBrowser3_Navigated);
             this.geckoWebBrowser3.ProgressChanged += new Skybound.Gecko.GeckoProgressEventHandler(this.geckoWebBrowser3_ProgressChanged);
             this.geckoWebBrowser3.Click += new System.EventHandler(this.geckoWebBrowser3_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 9);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -92,10 +89,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 38);
+            this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 400);
             this.panel1.TabIndex = 2;
@@ -119,6 +116,16 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Einstellungen";
+            // 
+            // check_size
+            // 
+            this.check_size.AutoSize = true;
+            this.check_size.Location = new System.Drawing.Point(6, 146);
+            this.check_size.Name = "check_size";
+            this.check_size.Size = new System.Drawing.Size(142, 17);
+            this.check_size.TabIndex = 19;
+            this.check_size.Text = "Merken der Fenstergöße";
+            this.check_size.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -283,33 +290,6 @@
             this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             this.txt_name.Enter += new System.EventHandler(this.txt_name_Enter);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 629);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1153, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(804, 634);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(330, 16);
-            this.progressBar1.TabIndex = 4;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -355,25 +335,28 @@
             // 
             // panel_Browser
             // 
+            this.panel_Browser.BackColor = System.Drawing.Color.Transparent;
             this.panel_Browser.Controls.Add(this.cmd_los);
             this.panel_Browser.Controls.Add(this.cmd_vor);
             this.panel_Browser.Controls.Add(this.cmd_zurueck);
             this.panel_Browser.Controls.Add(this.txt_url);
-            this.panel_Browser.Location = new System.Drawing.Point(130, 4);
+            this.panel_Browser.Location = new System.Drawing.Point(142, 0);
             this.panel_Browser.Name = "panel_Browser";
             this.panel_Browser.Size = new System.Drawing.Size(1011, 34);
             this.panel_Browser.TabIndex = 9;
             this.panel_Browser.Visible = false;
             // 
-            // check_size
+            // toolStripStatusLabel1
             // 
-            this.check_size.AutoSize = true;
-            this.check_size.Location = new System.Drawing.Point(6, 146);
-            this.check_size.Name = "check_size";
-            this.check_size.Size = new System.Drawing.Size(142, 17);
-            this.check_size.TabIndex = 19;
-            this.check_size.Text = "Merken der Fenstergöße";
-            this.check_size.UseVisualStyleBackColor = true;
+            this.toolStripStatusLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.toolStripStatusLabel1.AutoSize = true;
+            this.toolStripStatusLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.toolStripStatusLabel1.Location = new System.Drawing.Point(12, 634);
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(35, 13);
+            this.toolStripStatusLabel1.TabIndex = 10;
+            this.toolStripStatusLabel1.Text = "label4";
             // 
             // Form1
             // 
@@ -381,10 +364,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1153, 651);
-            this.Controls.Add(this.panel_Browser);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.toolStripStatusLabel1);
+            this.Controls.Add(this.panel_Browser);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.geckoWebBrowser3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -397,8 +379,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.panel_Browser.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -416,8 +396,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button cmd_Sucheorigin;
         private System.Windows.Forms.CheckBox check_autologin;
@@ -435,9 +413,9 @@
         private System.Windows.Forms.Button cmd_vor;
         private System.Windows.Forms.Button cmd_los;
         private System.Windows.Forms.Panel panel_Browser;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.TextBox txt_Pass;
         private System.Windows.Forms.CheckBox check_size;
+        private System.Windows.Forms.Label toolStripStatusLabel1;
     }
 }
 
